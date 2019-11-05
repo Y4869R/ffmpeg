@@ -1,0 +1,9 @@
+
+./configure --enable-shared --disable-x86asm --prefix=/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1
+
+
+gcc simplest_ffmpeg_player.c -g -o demo.out -I/usr/include/SDL -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/include -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/libswresample -L/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/lib/ -lSDLmain -lSDL -lavformat -lavcodec -lavutil -lswscale -lswresample
+
+
+
+
