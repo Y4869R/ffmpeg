@@ -5,5 +5,11 @@
 gcc simplest_ffmpeg_player.c -g -o demo.out -I/usr/include/SDL -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/include -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/libswresample -L/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/lib/ -lSDLmain -lSDL -lavformat -lavcodec -lavutil -lswscale -lswresample
 
 
+sudo vi /etc/ld.so.conf
+	/home/mlgc/ffmpeg/src/ffmpeg-4.2.1/lib
+sudo ldconfig
 
+sudo vi /etc/profile
+	export PATH="/home/mlgc/ffmpeg/src/ffmpeg-4.2.1:$PATH"
+source /etc/profile
 
