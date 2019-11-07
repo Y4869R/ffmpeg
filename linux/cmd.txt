@@ -6,6 +6,9 @@ gcc simplest_ffmpeg_player.c -g -o demo.out -I/usr/include/SDL -I/home/mlgc4869/
 
 g++ cdh_player.cpp -g -o cdh_player -I/usr/include/SDL -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/include -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/libswresample -L/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/lib/ -lSDLmain -lSDL -lavformat -lavcodec -lavutil -lswscale -lswresample -w
 
+
+g++ cdh_player_SDL2.cpp -g -o cdh_player2 -I/usr/include/SDL -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/include -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/libswresample -L/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/lib/ -lSDL2main -lSDL2 -lavformat -lavcodec -lavutil -lswscale -lswresample -w
+
 sudo vi /etc/ld.so.conf
 	/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/lib
 sudo ldconfig
