@@ -4,12 +4,18 @@
 
 gcc simplest_ffmpeg_player.c -g -o demo.out -I/usr/include/SDL -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/include -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/libswresample -L/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/lib/ -lSDLmain -lSDL -lavformat -lavcodec -lavutil -lswscale -lswresample
 
+g++ cdh_player.cpp -g -o cdh_player -I/usr/include/SDL -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/include -I/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/libswresample -L/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/lib/ -lSDLmain -lSDL -lavformat -lavcodec -lavutil -lswscale -lswresample -w
 
 sudo vi /etc/ld.so.conf
-	/home/mlgc/ffmpeg/src/ffmpeg-4.2.1/lib
+	/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1/lib
 sudo ldconfig
 
 sudo vi /etc/profile
-	export PATH="/home/mlgc/ffmpeg/src/ffmpeg-4.2.1:$PATH"
+	export PATH="/home/mlgc4869/ffmpeg/src/ffmpeg-4.2.1:$PATH"
 source /etc/profile
+
+
+PIX_FMT_YUV420P   ----   AV_PIX_FMT_YUV420P
+av_find_stream_info   ----  avformat_find_stream_info
+avcodec_alloc_frame   ----   av_frame_alloc
 
